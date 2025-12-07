@@ -5,6 +5,7 @@ import './App.css';
 import PriceDashboard from './components/PriceDashboard';
 import PredictionCard from './components/PredictionCard';
 import AssetSelector from './components/AssetSelector';
+import BacktestingPanel from './components/BacktestingPanel';
 import { apiService } from './services/apiService';
 
 function App() {
@@ -111,6 +112,9 @@ function App() {
                 livePrices={livePrices}
               />
             </div>
+
+            {/* Backtesting Section */}
+            <BacktestingPanel />
           </motion.div>
         </AnimatePresence>
       </main>

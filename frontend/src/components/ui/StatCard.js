@@ -26,19 +26,19 @@ const StatCard = ({
       </div>
       
       <div className="stat-card-value">
-        {typeof value === 'number' ? (
+        {typeof value === 'number' && !isNaN(value) ? (
           <AnimatedNumber value={value} />
         ) : (
-          <span>{value}</span>
+          <span>{value != null ? String(value) : 'N/A'}</span>
         )}
       </div>
       
-      {trend && trendValue && (
+      {trend && trendValue != null && (
         <div className={`stat-card-trend ${trend}`}>
           <span className="trend-icon">
             {trend === 'up' ? '↗' : trend === 'down' ? '↘' : '→'}
           </span>
-          <span>{trendValue}</span>
+          <span>{String(trendValue)}</span>
         </div>
       )}
     </motion.div>

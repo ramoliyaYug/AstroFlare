@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import priceRoutes from './routes/priceRoutes.js';
 import predictionRoutes from './routes/predictionRoutes.js';
+import backtestingRoutes from './routes/backtestingRoutes.js';
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.use(express.json());
 // Routes
 app.use('/api/prices', priceRoutes);
 app.use('/api/predictions', predictionRoutes);
+app.use('/api/backtesting', backtestingRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

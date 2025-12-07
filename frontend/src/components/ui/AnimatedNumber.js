@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useSpring, animated } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const AnimatedNumber = ({ value, decimals = 2, prefix = '', suffix = '' }) => {
   const [displayValue, setDisplayValue] = useState(0);
@@ -31,9 +31,13 @@ const AnimatedNumber = ({ value, decimals = 2, prefix = '', suffix = '' }) => {
   };
 
   return (
-    <animated.span>
+    <motion.span
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       {prefix}{formatNumber(displayValue)}{suffix}
-    </animated.span>
+    </motion.span>
   );
 };
 
