@@ -1,0 +1,53 @@
+.price-dashboard {
+  min-height: 400px;
+}
+
+.current-price {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.price-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.price-label {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.chart-container {
+  height: 400px;
+  margin-top: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.chart-container canvas {
+  max-height: 400px !important;
+}
+
+.data-note {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #f0f0f0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .price-value {
+    font-size: 2rem;
+  }
+
+  .chart-container {
+    height: 250px;
+  }
+}
+

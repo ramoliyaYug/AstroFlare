@@ -1,0 +1,34 @@
+{
+  "name": "vijeta-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Web3 cryptocurrency price prediction",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web3",
+    "cryptocurrency",
+    "prediction",
+    "flare",
+    "ftso"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@flarenetwork/flare-periphery-contract-artifacts": "^0.1.38",
+    "@google/generative-ai": "^0.2.1",
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.9.0",
+    "express": "^4.18.2",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

@@ -1,0 +1,201 @@
+/**
+ * AstroFlare - Premium App Styles
+ */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animated Background Orbs */
+.app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: float 20s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.8), transparent);
+  top: -250px;
+  left: -250px;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(118, 75, 162, 0.8), transparent);
+  bottom: -200px;
+  right: -200px;
+  animation-delay: 7s;
+}
+
+.orb-3 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.8), transparent);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 14s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+/* Header */
+.App-header {
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.logo-icon {
+  color: #667eea;
+  filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
+}
+
+.app-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.title-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(102, 126, 234, 0.5));
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.app-subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Main Content */
+.App-main {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1400px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    padding: 2rem 1rem;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .app-subtitle {
+    font-size: 1rem;
+  }
+
+  .App-main {
+    padding: 2rem 1rem;
+  }
+
+  .dashboard-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Footer */
+.App-footer {
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  padding: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 10;
+  font-size: 0.9rem;
+}
+
+.footer-highlight {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+.footer-divider {
+  margin: 0 1rem;
+  opacity: 0.3;
+}
