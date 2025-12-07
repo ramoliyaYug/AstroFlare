@@ -100,7 +100,7 @@ const BacktestingResults = ({ results }) => {
       </div>
 
       {/* Prediction vs Actual */}
-      <GlassCard className="comparison-card">
+      <GlassCard className="comparison-card" hover={false}>
         <h4 className="comparison-title">Prediction vs Actual</h4>
         
         <div className="comparison-grid">
@@ -166,7 +166,7 @@ const BacktestingResults = ({ results }) => {
       </GlassCard>
 
       {/* Detailed Metrics */}
-      <GlassCard className="detailed-metrics">
+      <GlassCard className="detailed-metrics" hover={false}>
         <h4 className="metrics-title">Detailed Metrics</h4>
         
         <div className="metrics-list">
@@ -194,7 +194,7 @@ const BacktestingResults = ({ results }) => {
 
       {/* Prediction Analysis */}
       {prediction.analysis && (
-        <GlassCard className="prediction-analysis">
+        <GlassCard className="prediction-analysis" hover={false}>
           <h4 className="analysis-title">AI Analysis</h4>
           <p className="analysis-text">{prediction.analysis}</p>
         </GlassCard>

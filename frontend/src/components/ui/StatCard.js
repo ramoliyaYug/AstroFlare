@@ -18,7 +18,7 @@ const StatCard = ({
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4 }}
-      whileHover={{ y: -4, scale: 1.02 }}
+      /* Removed hover effects */
     >
       <div className="stat-card-header">
         {icon && <div className="stat-card-icon">{icon}</div>}

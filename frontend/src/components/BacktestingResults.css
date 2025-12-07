@@ -66,12 +66,7 @@
   background: rgba(255, 255, 255, 0.03);
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  transition: all 0.3s ease;
-}
-
-.comparison-item:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(102, 126, 234, 0.3);
+  /* Removed hover effects */
 }
 
 .comparison-item.predicted {

@@ -78,9 +78,11 @@ const PredictionCard = ({ asset, prediction, loading, error, onRefresh, livePric
   if (loading) {
     return (
       <div className="prediction-card-futuristic">
-        <div className="prediction-loading">
-          <div className="spinner-futuristic"></div>
-          <p>Analyzing market data...</p>
+        <div className="prediction-card-content">
+          <div className="prediction-loading">
+            <div className="spinner-futuristic"></div>
+            <p>Analyzing market data...</p>
+          </div>
         </div>
       </div>
     );
@@ -89,11 +91,13 @@ const PredictionCard = ({ asset, prediction, loading, error, onRefresh, livePric
   if (error) {
     return (
       <div className="prediction-card-futuristic">
-        <div className="prediction-error">
-          <p>Error: {error}</p>
-          <button onClick={onRefresh} className="btn-primary-futuristic">
-            Retry
-          </button>
+        <div className="prediction-card-content">
+          <div className="prediction-error">
+            <p>Error: {error}</p>
+            <button onClick={onRefresh} className="btn-primary-futuristic">
+              Retry
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -108,11 +112,13 @@ const PredictionCard = ({ asset, prediction, loading, error, onRefresh, livePric
   if (!predData) {
     return (
       <div className="prediction-card-futuristic">
-        <div className="prediction-empty">
-          <p>No prediction available</p>
-          <button onClick={onRefresh} className="btn-primary-futuristic">
-            Get AI Prediction
-          </button>
+        <div className="prediction-card-content">
+          <div className="prediction-empty">
+            <p>No prediction available</p>
+            <button onClick={onRefresh} className="btn-primary-futuristic">
+              Get AI Prediction
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -127,8 +133,9 @@ const PredictionCard = ({ asset, prediction, loading, error, onRefresh, livePric
 
   return (
     <div className="prediction-card-futuristic">
-      {/* Header Section */}
-      <div className="prediction-header-futuristic">
+      <div className="prediction-card-content">
+        {/* Header Section */}
+        <div className="prediction-header-futuristic">
         <div className="price-section-header">
           <div className="asset-price-group">
             <span className="asset-symbol">{asset}</span>
@@ -227,14 +234,15 @@ const PredictionCard = ({ asset, prediction, loading, error, onRefresh, livePric
         </div>
       )}
 
-      {/* Technical Indicators Footer */}
-      <div className="technical-footer">
-        <div className="footer-item">
-          <span>Data Points: {prediction?.dataPointsUsed || 'N/A'}</span>
-        </div>
-        <div className="footer-divider">|</div>
-        <div className="footer-item">
-          <span>Powered by Gemini AI</span>
+        {/* Technical Indicators Footer */}
+        <div className="technical-footer">
+          <div className="footer-item">
+            <span>Data Points: {prediction?.dataPointsUsed || 'N/A'}</span>
+          </div>
+          <div className="footer-divider">|</div>
+          <div className="footer-item">
+            <span>Powered by Gemini AI</span>
+          </div>
         </div>
       </div>
     </div>
